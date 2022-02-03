@@ -10,7 +10,7 @@ David Smith    - [GitHub](https://github.com/DoodleBoops)
 Mary Prince    - [GitHub](https://github.com/Cheez0id)
 Triston Golden - [GitHub](https://github.com/TGolden95)
 
-## Coding Reqirements
+## Coding Requirements
 
 >1. Must use Node.js and Express.js to create a RESTful API
 >2. Must use Handlebars.js as the template engine
