@@ -1,35 +1,35 @@
-// // import models
-// const Product = require('./Product');
-// const User = require('./User');
-// const Cart = require('./Cart');
+// import models
+const Product = require('./Product');
+const User = require('./User');
+const Cart = require('./Cart');
 
 
-// // Products belongsTo Category
+// Products belongsTo Category
 
-// Product.belongsTo(User,{
-//   foreignKey: 'user_id',
-// });
-// // Categories have many Products
+Product.belongsTo(User,{
+  foreignKey: 'user_id',
+});
+// Categories have many Products
 
-// User.hasMany( Product,{
-//   foreignKey: 'category_id',
-// });
-// // Products belongToMany Tags (through ProductTag)
+User.hasMany( Product,{
+  foreignKey: 'category_id',
+});
+// Products belongToMany Tags (through ProductTag)
 
-// Product.belongsToMany(Cart, {
-//   through: ag,
-//   foreignKey: 'product_id'
-// });
-// // Tags belongToMany Products (through ProductTag)
+Product.belongsToMany(Cart, {
+  through: ag,
+  foreignKey: 'product_id'
+});
+// Tags belongToMany Products (through ProductTag)
 
-// Tag.belongsToMany(Product, {
-//   through: ProductTag,
-//   foreignKey: 'tag_id',
-// });
+Tag.belongsToMany(Product, {
+  through: ProductTag,
+  foreignKey: 'tag_id',
+});
 
-// module.exports = {
-//   Product,
-//   Category,
-//   Tag,
-//   ProductTag,
-// };
+module.exports = {
+  Product,
+  Category,
+  Tag,
+  ProductTag,
+};
