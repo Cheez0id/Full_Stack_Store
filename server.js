@@ -3,8 +3,10 @@ const sequelize = require('./config/connection');
 const app = express();
 const PORT = process.env.PORT || 3001;
 const mysql = require('mysql2');
-const hbs = require('handlebars');
 const exphbs = require('express-handlebars');
+const hbs = exphbs.create({});
+
+const path = require('path');
 
 //use handlbars engine! copied this from actitivity; the below format is paart of the handlebard documentation
 app.engine('handlebars', hbs.engine);
