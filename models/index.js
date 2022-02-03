@@ -4,32 +4,31 @@ const User = require('./User');
 const Cart = require('./Cart');
 
 
-// Products belongsTo Category
+// Products belongsTo User
 
 Product.belongsTo(User,{
   foreignKey: 'user_id',
 });
-// Categories have many Products
+// User have many Products
 
 User.hasMany( Product,{
-  foreignKey: 'category_id',
+  foreignKey: 'cart_id',
 });
-// Products belongToMany Tags (through ProductTag)
+// Products belongToMany Users (through ProductTag)
 
 Product.belongsToMany(Cart, {
-  through: ag,
+  through: User,
   foreignKey: 'product_id'
 });
 // Tags belongToMany Products (through ProductTag)
 
-Tag.belongsToMany(Product, {
-  through: ProductTag,
-  foreignKey: 'tag_id',
+Cart.belongsToMany(Product, {
+  through: User,
+  foreignKey: 'cart_id',
 });
 
 module.exports = {
   Product,
-  Category,
-  Tag,
-  ProductTag,
-};
+  User,
+  Cart,
+ };
