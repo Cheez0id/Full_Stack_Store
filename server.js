@@ -1,12 +1,22 @@
 const express = require('express');
 const sequelize = require('./config/connection');
-const models = require('./models');
 const app = express();
 const PORT = process.env.PORT || 3001;
 const mysql = require('mysql2');
+const hbs = require('handlebars');
+const exphbs = require('express-handlebars');
+
+//use handlbars engine! copied this from actitivity; the below format is paart of the handlebard documentation
+app.engine('handlebars', hbs.engine);
+app.set('view engine', 'handlebars');
 
 //setting default root folder to 'public'
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname,'public')));
+
+// const routes = require('./controllers');
+// app.use(routes);
+//17 and 18 are the same as 20
+app.use(require('./controllers'))
 
 //username/passwords hidden via sequelize using .env and the local host(your PC) which is where the database will be generated 
 var fullstack_db = mysql.createConnection({
@@ -25,11 +35,10 @@ fullstack_db.connect((err) => {
 })
 
 
+
 //connect to port 3001 or first available 
 sequelize.sync({force:true}).then(()=> {
   app.listen(PORT, ()=> {
     console.log(`helloooo!!! it's workin ${PORT}`);
   });
 });
-
-
