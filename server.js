@@ -16,7 +16,7 @@ app.use(express.static(path.join(__dirname,'public')));
 // const routes = require('./controllers');
 // app.use(routes);
 //17 and 18 are the same as 20
-app.use(require('./controllers'))
+app.use(require('./controllers/primaryRoutes'))
 
 //username/passwords hidden via sequelize using .env and the local host(your PC) which is where the database will be generated 
 var fullstack_db = mysql.createConnection({
