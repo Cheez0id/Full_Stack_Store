@@ -29,6 +29,7 @@ Triston Golden - [GitHub](https://github.com/TGolden95)
 >14. Must have a professional README (unique name, description, link to the deployed app)
 
 ```
+PSUDOCODE FROM JUNG
 <!-- ALWAYS START WITH YOUR SERVER & YOUR DATABASE -->
 
 0) Make sure you make a git repo, .gitignore, add .env to the .gitignore file, npm i, hide your personal information except give me your credit card info :^) 
