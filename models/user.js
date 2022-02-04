@@ -1,6 +1,6 @@
-const { Model, DataTypes } = require('sequelize');
+const { Model, DataTypes } = require("sequelize");
 
-const sequelize = require('../config/connection.js');
+const sequelize = require("../config/connection.js");
 
 class User extends Model {}
 
@@ -13,8 +13,23 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
+
     user_name: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+
+    phone: {
+      type: DataType.INTEGER,
+      allowNull: false,
+    },
+    payment_method: {
+      type: DataType.INTEGER,
       allowNull: false,
     },
   },
@@ -23,9 +38,8 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user',
+    modelName: "user",
   }
 );
 
 module.exports = User;
-
