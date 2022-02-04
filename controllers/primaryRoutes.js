@@ -1,15 +1,27 @@
 const router = require('express').Router();
-// const models = require('../models');
-const { User, Product, Cart } = require('../models');
+// const { User, Product, Cart } = require('../models');
 const path = require('path');
 
 //The difference between 2&3 above allows a destructure of the models folder so that if i call to a table later in this file I can just say 'tablename' instead of 'models.tablename'
 // i will have to require the routes files that I create here in index.js 
 //i will have to export those routes in those route files
 
-// router.get('/', async (req, res) => {
-//   res.render('all');
-// });
+//the below res.render all - the reason we can use it is because we downloaded the express.handlebars library
+
+router.get('/', async(req, res) => {
+  console.log('hello');
+  res.render('all');
+})
+
+router.get('/products', async(req, res) => {
+  console.log('hello');
+  res.render('productPage');
+})
+
+router.get('/something', async (req, res) => {
+  console.log('ayayayayaaaaa')
+  res.render('all');
+});
 
 
 // BELOW IS ME LEARNING/STUDYING
