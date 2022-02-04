@@ -7,9 +7,9 @@ const path = require('path');
 // i will have to require the routes files that I create here in index.js 
 //i will have to export those routes in those route files
 
-router.get('/', async (req, res) => {
-  res.render('all');
-});
+// router.get('/', async (req, res) => {
+//   res.render('all');
+// });
 
 
 // BELOW IS ME LEARNING/STUDYING
