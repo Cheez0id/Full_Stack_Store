@@ -53,6 +53,8 @@ change it back to (force: false) IF YOU ARE KEEP THE TABLES.
 
 
 
-## Wireframe
-![Wireframe](Assets/Images/Wireframe.png "Wireframe")
+## Original Wireframe
+![Wireframe](/public/images/Wireframe.png "Wireframe")
 
+## Template
+![Wireframe](/public/images/alldothandlebars.JPG "Wireframe")
