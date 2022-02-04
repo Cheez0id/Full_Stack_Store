@@ -18,10 +18,7 @@ router.get('/products', async(req, res) => {
   res.render('productPage');
 })
 
-router.get('/something', async (req, res) => {
-  console.log('ayayayayaaaaa')
-  res.render('all');
-});
+
 
 
 // BELOW IS ME LEARNING/STUDYING
