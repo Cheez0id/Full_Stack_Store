@@ -6,7 +6,8 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# for the macs!
+
+# For the Macs
 .DS_Store
 
 # Diagnostic reports (https://nodejs.org/api/report.html)
