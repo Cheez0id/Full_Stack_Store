@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const primary = require('./primaryRoutes')
 
 // const { User, Product, Cart } = require('../models');
 const path = require('path');
