@@ -1,4 +1,5 @@
 const router = require('express').Router();
+
 // const { User, Product, Cart } = require('../models');
 const path = require('path');
 
@@ -8,18 +9,23 @@ const path = require('path');
 
 //the below res.render all - the reason we can use it is because we downloaded the express.handlebars library
 
-router.get('/', async(req, res) => {
-  console.log('hello');
-  res.render('all');
-})
+// router.get('/', async(req, res) => {
+//   console.log('hello');
+//   res.render('all');
+// })
 
 router.get('/products', async(req, res) => {
   console.log('hello');
   res.render('productPage');
 })
 
-
-
+// primary Trying to make routes modularized; the below function should live in 'primaryRoutes' but im not exactly how to export and call the function
+const homePage= () =>{
+  router.get('/', async(req, res) => {
+    console.log('hello');
+    res.render('all');
+  })}
+  homePage();
 
 // BELOW IS ME LEARNING/STUDYING
 
