@@ -6,26 +6,28 @@ const Cart = require('./Cart');
 
 // Products belongsTo User
 
-Product.belongsTo(User,{
-  foreignKey: 'user_id',
-});
+// Product.belongsTo(User,{
+//   foreignKey: 'user_id',
+// });
 // User have many Products
 
-User.hasMany( Product,{
-  foreignKey: 'cart_id',
-});
+// User.hasMany( Product,{
+//   foreignKey: 'cart_id',
+// });
 // Products belongToMany Users (through ProductTag)
 
-Product.belongsToMany(Cart, {
-  through: User,
-  foreignKey: 'product_id'
-});
-// Tags belongToMany Products (through ProductTag)
 
-Cart.belongsToMany(Product, {
-  through: User,
-  foreignKey: 'cart_id',
-});
+// Product.belongsToMany(Cart, {
+//   through: User,
+//   foreignKey: 'product_id'
+// });
+
+// Tags belongToMany Products (through ProductTag)
+//COMMENTED OUT THE BELOW - CARTS SHOULD NOT GO IN PRODUCTS
+// Cart.belongsToMany(Product, {
+//   through: User,
+//   foreignKey: 'cart_id',
+// });
 
 module.exports = {
   Product,
