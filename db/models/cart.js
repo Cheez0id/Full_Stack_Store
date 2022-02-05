@@ -13,13 +13,13 @@ Cart.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    // product_id: {
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: 'product',
-    //     key: 'id',
-    //   }
-    // },
+    product_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'product',
+        key: 'id',
+      }
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
