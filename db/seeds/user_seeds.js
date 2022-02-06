@@ -5,7 +5,7 @@ const userData = [
     user_name: "Fake",
     user_id: 1,
     address: "23 Bee",
-    phone: 4042252255,
+    phone: "4042252255",
     payment_method:25,
   },
 ];

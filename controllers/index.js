@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const User = require('../db/models/User')
 
 // const { User, Product, Cart } = require('../models');
 const path = require('path');
@@ -22,10 +23,15 @@ router.get('/products', async(req, res) => {
 // primary Trying to make routes modularized; the below function should live in 'primaryRoutes' but im not exactly how to export and call the function
 const homePage= () =>{
   router.get('/', async(req, res) => {
-    console.log('hello');
-    res.render('all');
-  })}
-  homePage();
+    // User.findAll().then((userData) => {
+    //   console.log(userData);
+    //   res.json(userData)
+    // });
+    res.render('all')  
+  })
+}
+
+homePage();
 
 // BELOW IS ME LEARNING/STUDYING
 

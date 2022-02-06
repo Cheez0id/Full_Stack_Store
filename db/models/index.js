@@ -1,3 +1,6 @@
+const sequelize = require("../../config/connection");
+
+
 // import models
 const Product = require('./Product');
 const User = require('./User');
@@ -16,14 +19,12 @@ const Cart = require('./Cart');
 // });
 // Products belongToMany Users (through ProductTag)
 
-
 // Product.belongsToMany(Cart, {
 //   through: User,
 //   foreignKey: 'product_id'
 // });
-
 // Tags belongToMany Products (through ProductTag)
-//COMMENTED OUT THE BELOW - CARTS SHOULD NOT GO IN PRODUCTS
+
 // Cart.belongsToMany(Product, {
 //   through: User,
 //   foreignKey: 'cart_id',

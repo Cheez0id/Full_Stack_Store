@@ -1,6 +1,7 @@
 const { Model, DataTypes } = require("sequelize");
 
-const sequelize = require("../../config/connection.js");
+const sequelize = require("../../config/connection");
+
 
 class User extends Model {}
 
@@ -25,7 +26,7 @@ User.init(
     },
 
     phone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     payment_method: {
