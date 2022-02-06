@@ -1,3 +1,6 @@
+const sequelize = require("../../config/connection");
+
+
 // import models
 const Product = require('./Product');
 const User = require('./User');
