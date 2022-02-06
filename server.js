@@ -41,7 +41,7 @@ app.use(require('./controllers'));
 
 
 //connect to port 3001 or first available 
-sequelize.sync({force:true}).then(()=> {
+sequelize.sync({force:false}).then(()=> {
   app.listen(PORT, ()=> {
     console.log(`helloooo!!! it's workin ${PORT}`);
   });
