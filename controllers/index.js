@@ -23,10 +23,10 @@ router.get('/products', async(req, res) => {
 // primary Trying to make routes modularized; the below function should live in 'primaryRoutes' but im not exactly how to export and call the function
 const homePage= () =>{
   router.get('/', async(req, res) => {
-    User.findAll().then((userData) => {
-      console.log(userData);
-      res.json(userData)
-    });
+    // User.findAll().then((userData) => {
+    //   console.log(userData);
+    //   res.json(userData)
+    // });
     res.render('all')  
   })
 }
