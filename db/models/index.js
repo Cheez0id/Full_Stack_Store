@@ -19,16 +19,16 @@ User.hasMany( Product,{
 });
 // Products belongToMany Users (through ProductTag)
 
-Product.belongsToMany(Cart, {
-  through: User,
-  foreignKey: 'product_id'
-});
+// Product.belongsToMany(Cart, {
+//   through: User,
+//   foreignKey: 'product_id'
+// });
 // Tags belongToMany Products (through ProductTag)
 
-Cart.belongsToMany(Product, {
-  through: User,
-  foreignKey: 'cart_id',
-});
+// Cart.belongsToMany(Product, {
+//   through: User,
+//   foreignKey: 'cart_id',
+// });
 
 module.exports = {
   Product,

@@ -2,7 +2,7 @@ const seedUsers = require('./user_seeds');
 const seedProducts = require('./product_seeds');
 const seedCarts = require('./cart_seeds');
 
-const sequelize = require('../config/connection');
+const sequelize = require('../../config/connection');
 
 const seedAll = async () => {
   await sequelize.sync({ force: true });
