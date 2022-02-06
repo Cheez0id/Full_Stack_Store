@@ -35,7 +35,7 @@ Product.init(
       defaultValue: 10,
       isNumeric: true,
     },
-  },
+      },
   {
     sequelize,
     timestamps: false,
