@@ -12,20 +12,12 @@ const Sequelize = require('sequelize');
 //       },
 //     });
 
-const sequelize = new Sequelize('fullstack_db', 'root', 'code', {
+const sequelize = new Sequelize(process.env.DB_NAME, 'root', 'code', {
   host: 'localhost',
-  dialect: 'mysql'})
+  dialect: 'mysql',
+  port: 3306
+})
 
-//an attempt at testing the connection to the db
-// const testConnect = () =>{      
-//     try {
-//         await sequelize.authenticate();
-//         console.log('Connection has been established successfully.');
-//       } catch (error) {
-//         console.error('Unable to connect to the database:', error);
-//       }}
-
-// testConnect();
 
 //A different attempt at testing the connection to the db
 sequelize.authenticate().then(function(errors) { console.log(errors) });

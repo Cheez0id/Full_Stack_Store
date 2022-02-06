@@ -6,7 +6,6 @@ We will concieve and execute a design that solves a real-workd problem.  We will
 
 ## Contributors: 
 Akeia McCollum - [GitHub](https://github.com/DrMcCollum5)
-David Smith    - [GitHub](https://github.com/DoodleBoops)
 Mary Prince    - [GitHub](https://github.com/Cheez0id)
 Triston Golden - [GitHub](https://github.com/TGolden95)
 

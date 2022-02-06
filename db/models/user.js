@@ -26,7 +26,7 @@ User.init(
     },
 
     phone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
     payment_method: {
