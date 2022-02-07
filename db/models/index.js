@@ -9,14 +9,14 @@ const Cart = require('./Cart');
 
 // Products belongsTo User
 
-Product.belongsTo(User,{
-  foreignKey: 'user_id',
-});
+// Product.belongsTo(User,{
+//   foreignKey: 'user_id',
+// });
 // User have many Products
 
-User.hasMany( Product,{
-  foreignKey: 'cart_id',
-});
+// User.hasMany( Product,{
+//   foreignKey: 'cart_id',
+// });
 // Products belongToMany Users (through ProductTag)
 
 // Product.belongsToMany(Cart, {

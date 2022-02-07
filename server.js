@@ -1,7 +1,7 @@
 const express = require('express');
 const sequelize = require('./config/connection');
 const path = require('path');
-//const mysql = require('mysql2');
+// const mysql = require('mysql2');
 const exphbs = require('express-handlebars');
 
 const app = express();
@@ -31,7 +31,7 @@ app.use(require('./controllers'));
 //   database: process.env.DB_NAME,
 // });
 
-// //Connecting to the fullstack_db database
+//Connecting to the fullstack_db database
 // fullstack_db.connect((err) => {
 //   if (err){
 //     throw err;
