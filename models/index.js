@@ -2,9 +2,9 @@
 
 
 // import models
-const Product = require('./product');
-const User = require('./user');
-const Cart = require('./cart');
+const Product = require('./Product');
+const User = require('./User');
+const Cart = require('./Cart');
 
 
 // Products belongsTo User
