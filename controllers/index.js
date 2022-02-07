@@ -1,8 +1,16 @@
 const router = require('express').Router();
-const User = require('../db/models/user')
+const homeRoutes = require('./home-routes');
+//require the api/routes folder
+const apiRoutes = require('./api/');
+//direct to the api/routes folder
+router.use('/', homeRoutes);
+router.use('/api', apiRoutes);
+//export
+
+// const User = require('../db/models/User')
 
 // const { User, Product, Cart } = require('../models');
-const path = require('path');
+// const path = require('path');
 
 //The difference between 2&3 above allows a destructure of the models folder so that if i call to a table later in this file I can just say 'tablename' instead of 'models.tablename'
 // i will have to require the routes files that I create here in index.js 
@@ -15,34 +23,34 @@ const path = require('path');
 //   res.render('all');
 // })
 
-router.get('/products', async(req, res) => {
-  console.log('hello');
-  res.render('productPage');
-})
+// router.get('/products', async(req, res) => {
+//   console.log('hello');
+//   res.render('productPage');
+// })
 
 // primary Trying to make routes modularized; the below function should live in 'primaryRoutes' but im not exactly how to export and call the function
-const homePage= () =>{
-  router.get('/', async(req, res) => {
+// const homePage= () =>{
+//   router.get('/', async(req, res) => {
     // User.findAll().then((userData) => {
     //   console.log(userData);
     //   res.json(userData)
     // });
-    res.render('all')  
-  })
-}
+//     res.render('all')  
+//   })
+// }
 
-homePage();
+// homePage();
 
 // BELOW IS ME LEARNING/STUDYING
 
 //very simple get request.
 // respond with "hello world" when a GET request is made to the homepage
-router.get('/test', function (req, res, next) {
-  res.send('hello world')
-  console.log("testing this out")
-  next()
-  console.log("what does next do?")
-})
+// router.get('/test', function (req, res, next) {
+//   res.send('hello world')
+//   console.log("testing this out")
+//   next()
+//   console.log("what does next do?")
+// })
 
 // POST method route
 // app.post('/test', function (req, res) {
@@ -67,4 +75,21 @@ module.exports = router;
 // 	} catch (err) {
 // 		res.status(500).json(err);
 // 	}
+// });
+
+
+// app.use(express.json());
+ 
+// app.get('/', (req, res) => {
+//   res.sendFile(__dirname + '/index.html');
+// });
+ 
+// app.post('/', (req, res) => {
+//   const { username, password } = req.body;
+//   const { authorization } = req.headers;
+//   res.send({
+//     username,
+//     password,
+//     authorization,
+//   });
 // });

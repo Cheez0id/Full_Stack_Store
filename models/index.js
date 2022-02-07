@@ -1,17 +1,21 @@
+<<<<<<< HEAD:db/models/index.js
 // const sequelize = require("../../config/connection");
+=======
+// const sequelize = require("../config/connection");
+>>>>>>> bd9862527822689f8ef264b7d271bc4bc83b92a6:models/index.js
 
 
 // import models
-const Product = require('./products');
+const Product = require('./product');
 const User = require('./user');
 const Cart = require('./cart');
 
 
 // Products belongsTo User
 
-// Product.belongsTo(User,{
-//   foreignKey: 'user_id',
-// });
+Product.belongsTo(User,{
+  foreignKey: 'user_id',
+});
 // User have many Products
 
 // User.hasMany( Product,{
