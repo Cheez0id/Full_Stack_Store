@@ -1,10 +1,14 @@
 // const sequelize = require("../config/connection");
 
 
-// import models
-const Product = require('./product');
-const User = require('./user');
-const Cart = require('./cart');
+// adding some comments here to try and get heroku working
+
+// import models; making a comment here
+
+
+const Product = require('./Product');
+const User = require('./User');
+const Cart = require('./Cart');
 
 
 // Products belongsTo User
