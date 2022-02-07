@@ -1,6 +1,8 @@
+const Sequelize = require('sequelize');
+
 require('dotenv').config();
 
-const Sequelize = require('sequelize');
+
 
 // const sequelize = process.env.FULLSTACKDB_URL
 //   ? new Sequelize(process.env.FULSTACKDB_URL)
@@ -20,7 +22,7 @@ const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, proces
 
 
 //A different attempt at testing the connection to the db
-sequelize.authenticate().then(function(errors) { console.log(errors) });
+// sequelize.authenticate().then(function(errors) { console.log(errors) });
 
 
     // const mysql = require('mysql2');
