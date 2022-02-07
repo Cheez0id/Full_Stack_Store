@@ -1,8 +1,4 @@
-<<<<<<< HEAD:db/models/index.js
-// const sequelize = require("../../config/connection");
-=======
 // const sequelize = require("../config/connection");
->>>>>>> bd9862527822689f8ef264b7d271bc4bc83b92a6:models/index.js
 
 
 // import models
