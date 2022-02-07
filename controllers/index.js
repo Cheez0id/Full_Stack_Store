@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const User = require('../db/models/userNAME')
+const User = require('../db/models/user')
 
 // const { User, Product, Cart } = require('../models');
 const path = require('path');
