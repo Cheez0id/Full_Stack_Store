@@ -2,7 +2,7 @@
 
 
 // import models
-const Product = require('./products');
+const Product = require('./product');
 const User = require('./user');
 const Cart = require('./cart');
 
