@@ -1,7 +1,11 @@
-const sequelize = require("../../config/connection");
+// const sequelize = require("../config/connection");
 
 
-// import models
+// adding some comments here to try and get heroku working
+
+// import models; making a comment here
+
+
 const Product = require('./Product');
 const User = require('./User');
 const Cart = require('./Cart');
@@ -9,9 +13,9 @@ const Cart = require('./Cart');
 
 // Products belongsTo User
 
-// Product.belongsTo(User,{
-//   foreignKey: 'user_id',
-// });
+Product.belongsTo(User,{
+  foreignKey: 'user_id',
+});
 // User have many Products
 
 // User.hasMany( Product,{

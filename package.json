@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
   },
   "repository": {
     "type": "git",
@@ -29,5 +30,8 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.0.18"
+  },
+  "engines": {
+    "node": "v17.3.0"
   }
 }

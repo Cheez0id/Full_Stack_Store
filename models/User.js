@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require("sequelize");
 
-const sequelize = require("../../config/connection");
+const sequelize = require("../config/connection");
 
 
 class User extends Model {}
@@ -30,7 +30,7 @@ User.init(
       allowNull: false,
     },
     payment_method: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
@@ -39,7 +39,7 @@ User.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "user",
+    modelName: "User",
   }
 );
 
