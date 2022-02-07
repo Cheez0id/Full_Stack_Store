@@ -1,17 +1,17 @@
-const sequelize = require("../../config/connection");
+// const sequelize = require("../config/connection");
 
 
 // import models
-const Product = require('./products');
+const Product = require('./product');
 const User = require('./user');
 const Cart = require('./cart');
 
 
 // Products belongsTo User
 
-// Product.belongsTo(User,{
-//   foreignKey: 'user_id',
-// });
+Product.belongsTo(User,{
+  foreignKey: 'user_id',
+});
 // User have many Products
 
 // User.hasMany( Product,{
