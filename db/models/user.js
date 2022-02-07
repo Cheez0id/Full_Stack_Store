@@ -30,7 +30,7 @@ User.init(
       allowNull: false,
     },
     payment_method: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
