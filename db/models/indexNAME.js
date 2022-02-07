@@ -2,9 +2,9 @@ const sequelize = require("../../config/connection");
 
 
 // import models
-const Product = require('./Product');
-const User = require('./User');
-const Cart = require('./Cart');
+const Product = require('./productNAME');
+const User = require('./userNAME');
+const Cart = require('./cartNAME');
 
 
 // Products belongsTo User
