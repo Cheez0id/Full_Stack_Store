@@ -5,7 +5,9 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 80;
+
+
 
 
 //use handlbars engine! copied this from actitivity; the below format is paart of the handlebard documentation
