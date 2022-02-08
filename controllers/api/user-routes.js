@@ -1,18 +1,17 @@
 const router = require('express').Router();
  
-router.get('/', (req, res) => {
+router.get('/api', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
  
 router.post('/', (req, res) => {
-  const { username, phone, address, paymentMethod } = req.body;
-  const { authorization } = req.headers;
+  const { email, address, password, paymentMethod } = req.body;
+  // const { paymentMethod } = req.headers;
   res.send({
-    username,
-    phone,
+    email,
     address,
-    paymentMethod,
-    authorization
+    password,
+    paymentMethod
   });
 });
 
